@@ -8,9 +8,7 @@
         {% block stylesheets %}
         {% endblock %}
 
-        {% block javascripts %}
-            {% block importmap %}{{ importmap('app') }}{% endblock %}
-        {% endblock %}
+       
     </head>
     <body>
        
@@ -18,9 +16,14 @@
             <ul>
                 <li><a href="{{ path('app_entreprise')}}">Liste des Entreprises </li>
                 <li><a href="{{ path('app_employe')}}">Liste des Employe </a></li>
+                <li><a href="{{ path('new_entreprise')}}">Ajouter une entreprise</a></li>
+                <li><a href="{{ path('new_employe')}}">Ajouter un employé</a></li>
             </ul>
         </nav>   
          {% block body %}{% endblock %}
- 
+        
+         {% block javascripts %}
+            <script src="{{ asset('js/script.js')}}"></script>
+         {% endblock %}
     </body>
 </html>
