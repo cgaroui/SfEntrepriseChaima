@@ -21,12 +21,12 @@ class EntrepriseType extends AbstractType
                 ]
             ])
 
-            ->add('dateCreation', null, [
+            ->add('dateCreation', DateType::class, [
                 'widget' => 'single_text',
                 'attr' => [
                     'class' => 'form-control',
                 ]
-                ],DateType::class)
+            ])
 
             ->add('adresse', TextType::class, [
                 'attr' => [

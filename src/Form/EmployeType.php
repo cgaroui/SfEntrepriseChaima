@@ -29,19 +29,19 @@ class EmployeType extends AbstractType
                 ]
             ])
 
-            ->add('dateNaissance', null, [
+            ->add('dateNaissance',DateType::class, [
                 'widget' => 'single_text',
                 'attr' => [
                     'class' => 'form-control',
                 ]
-                ],DateType::class)
+                ])
                 
-            ->add('dateEmbauche', null, [
+            ->add('dateEmbauche',DateType::class, [
                 'widget' => 'single_text',
                 'attr' => [
                     'class' => 'form-control',
                 ]
-                ],DateType::class)
+                ])
 
             ->add('ville', TextType::class, [
                 'attr' => [
