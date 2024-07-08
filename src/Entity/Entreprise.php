@@ -59,10 +59,15 @@ class Entreprise
 
         return $this;
     }
-
     public function getDateCreation(): ?\DateTimeInterface
     {
         return $this->dateCreation;
+    }
+
+
+    public function getDateCreationfr(): ?string
+    {
+        return $this->dateCreation->format("d/m/y");
     }
 
     public function setDateCreation(\DateTimeInterface $dateCreation): static
@@ -106,6 +111,11 @@ class Entreprise
         $this->ville = $ville;
 
         return $this;
+    }
+
+    public function getAdresseComplete(): ?string 
+    {
+        return $this->adresse." ".$this->cp." ".$this->ville;
     }
 
     /**
