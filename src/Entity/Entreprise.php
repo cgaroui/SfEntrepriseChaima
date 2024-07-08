@@ -30,6 +30,7 @@ class Entreprise
 
     #[ORM\Column(length: 50)]
     private ?string $ville = null;
+    
 
     /**
      * @var Collection<int, Employe>
